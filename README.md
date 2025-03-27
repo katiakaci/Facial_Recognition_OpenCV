@@ -1,25 +1,17 @@
-# reconnaissance-faciale
+# Projet de Reconnaissance Faciale avec OpenCV
 
-Voici l'enoncé et le tutoriel à suivre: [Énoncé](https://cours.etsmtl.ca/mti805/private/labos/laboratoire1.pdf) & [Tutoriel](https://pyimagesearch.com/2018/09/24/opencv-face-recognition/).
+## Description
+Ce projet implémente un système de reconnaissance faciale en temps réel en utilisant la bibliothèque OpenCV. L'application est capable de détecter et de reconnaître des visages à partir d'un flux vidéo ou d'images enregistrées. Le modèle utilise un détecteur de visages, un extracteur d'empreintes faciales et un classificateur pour associer les visages à des identités connues.
 
-Voici les étapes importantes à connaitre pour démarrer le code.
+## Exécution
+Exécuter la commande suivante en remplaçant [nom de l'image] par le fichier image à tester : `python recognize.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle --image images/[nom de l'image]`
 
-### Pip Install
+Pour effectuer la reconnaissance faciale en temps réel depuis une caméra: `python recognize_video.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle`
 
-Pour commencer faire une pip install dans la console (PowerShell ou CMD). Donc faire la commande suivante: `pip install imutils numpy argparse opencv-contrib-python scikit-learn`
-
-### Sortir les Embeddings des images de training (dataset)
-
-Faire la commande suivante dans la console pour starter le code: `python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7`
-
-### Entrainer le model
-
-Faire la commande suivante dans la console pour starter le code: `python train_model.py --embeddings output/embeddings.pickle --recognizer output/recognizer.pickle --le output/le.pickle`
-
-### Tester le model
-
-Faire la commande suivante dans la console pour starter le code: `python recognize.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle --image images/[nom de l'image]`
-
-Simplement remplacer [nom de l'image] par l'image qu'on souhaite tester.
-
-Faire la commande suivante pour reconnaitre un visage dans une vidéo: `python recognize_video.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle`
+## Résultats
+Voici quelques exemples de détection et de reconnaissance faciale obtenus avec ce projet :
+<img src="results/result1.png" alt="Exemple de détection sur une image" width="500">
+<img src="results/result2.png" alt="Exemple de détection sur une image" width="500">
+<img src="results/result3.png" alt="Exemple de détection sur une image" width="500">
+<img src="results/result4.png" alt="Exemple de détection sur une image" width="500">
+<img src="results/result5.png" alt="Exemple de détection sur une image" width="500">
